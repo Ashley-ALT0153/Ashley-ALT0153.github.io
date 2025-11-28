@@ -5,22 +5,76 @@ body {
     margin: 0%;
 
     nav {
-        color : rgb(0, 0, 0);
-        background-color : #ffcf944d;
+        color : #ffffff;
+        background-color: rgba(0, 0, 0, 0.680);
 
         padding: 1rem;
         padding-right: 1rem;
-
-        display: flex;
+        display : flex;
         justify-content: space-around;
 
-        p{
-            background-color: white;
-            border: white 1px solid;
+        .name_title{
+            font-family: 'Bebas Neue';
+            font-size: 2rem;
+
+            margin-bottom: 0%;
         }
+
+        .job_title{
+            font-size: small;
+        }
+
+        .about{
+            display : flex;
+            align-items: center;
+
+            p{
+                font-family: 'Bebas Neue';
+                font-size: 2rem;
+
+                margin-left: 5rem;
+                
+                margin-top: 0%;
+                margin-bottom: 0%;
+            }  
+        }
+            
     }
 
-    h1{
-        margin-left: 1rem;
+    .main{
+        margin-left: 4.5rem;
+        margin-right : 4rem;
+
+        display: flex;
+        flex-direction: row;
+
+        .left_main{
+            padding: 1rem;
+            width: 50%;
+        }
+
+        .right_main{
+            padding: 1rem;
+
+            width: 100%;
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+
+            .github_main{
+                width: 5rem;
+            }
+
+            .linkedin_main{
+                width: 5rem;
+            }
+
+            .mail_main{
+                width: 6rem;
+            }
+        }
+
     }
 }
