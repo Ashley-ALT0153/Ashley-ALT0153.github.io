@@ -1,0 +1,26 @@
+body {
+    background-color : #d5c2fccb;
+    font-family: 'Playwrite NO';
+
+    margin: 0%;
+
+    nav {
+        color : rgb(0, 0, 0);
+        background-color : #ffcf944d;
+
+        padding: 1rem;
+        padding-right: 1rem;
+
+        display: flex;
+        justify-content: space-around;
+
+        p{
+            background-color: white;
+            border: white 1px solid;
+        }
+    }
+
+    h1{
+        margin-left: 1rem;
+    }
+}
