@@ -45,36 +45,46 @@ body {
         margin-left: 4.5rem;
         margin-right : 4rem;
 
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
 
         .left_main{
             padding: 1rem;
-            width: 50%;
+
+            width: 85%;
+
+            grid-column: 1 / 3;
+            grid-row: 1;
         }
 
         .right_main{
             padding: 1rem;
+            margin-right: 4rem;
 
-            width: 100%;
+            grid-column: 3 / 3;
+            grid-row: 1;
+        }
+        
+        .logo{
 
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(3, 0fr);
+            justify-content: space-evenly;
+            justify-items: center;
+            grid-column: 4 / 1;
 
-
-            .github_main{
-                width: 5rem;
+            .github_logo{
+                width: 4rem;
             }
 
-            .linkedin_main{
-                width: 5rem;
+            .linkedin_logo{
+                width: 4rem;
             }
 
-            .mail_main{
-                width: 6rem;
+            .mail_logo{
+                width: 4rem;
             }
         }
-
+       
     }
 }
