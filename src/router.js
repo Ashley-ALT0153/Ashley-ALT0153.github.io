@@ -3,19 +3,19 @@ import {Router} from "express";
 const mainRouter = Router();
 
 mainRouter.get("/", (req, res) => {
-    res.sendFile(`pages/index.ejs`);
+    res.sendFile(`public/index.html`);
 });
 
 mainRouter.get("/presentation", (req, res) =>{
-    res.sendFile(`pages/presentation.ejs`);
+    res.sendFile(`public/presentation.html`);
 });
 
 mainRouter.get("/creation", (req, res) =>{
-    res.sendFile(`pages/creation.ejs`);
+    res.sendFile(`public/creation.html`);
 });
 
 mainRouter.get("/contact", (req, res) =>{
-    res.sendFile(`pages/contact.ejs`);
+    res.sendFile(`public/contact.html`);
 });
 
 export {mainRouter};

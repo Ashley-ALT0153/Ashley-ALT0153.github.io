@@ -1,107 +1,392 @@
-@media screen and (max-width : 768px) {
-    * {
-        background-color : #d5c2fccb;
-        font-family: 'Playwrite NO';
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        margin: 0%;
-        padding: 0%;
-
-        box-sizing: border-box;
+        body {
+            background-color: #d5c2fccb;
+            font-family: 'Playwrite NO', cursive;
+        }
 
         nav {
             color: #ffffff;
             background-color: rgba(0, 0, 0, 0.680);
-
-            padding: 1rem;
-
+            padding: 0.5rem;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             grid-template-rows: 1fr;
+        }
 
-            button {
-                font-size: 2rem;
-                display: block;
-                width: 80%;
-            };
+        nav button {
+            font-size: 1.5rem;
+            display: block;
+            width: 80%;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+        }
 
-            .title {
+        nav button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
 
-                background-color: rgba(0, 0, 0, -0.32);
+        .title {
+            grid-column: 2 / 4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-                padding-left: 1rem;
+        .name_title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: x-large;
+        }
 
-                grid-column: 2 / 4;
+        .job_title {
+            font-size: x-small;
+        }
 
-                .name_title {
-                    font-family: 'Bebas Neue';
-                    font-size: xx-large;
+        .menu_about {
+            display: none;
+            flex-direction: column;
+            margin-top: 15px;
+        }
 
-                    background-color: rgba(0, 0, 0, -0.32);
-                };
+        .menu_about.active {
+            display: flex;
+            grid-column: 1 / 4;
+        }
 
-                .job_title {
-                    font-size: x-small;
-                    background-color: rgba(0, 0, 0, -0.32);
-                };
-            };
+        .menu_about a {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: large;
+            padding: 1rem;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
 
-            .menu_about {
-                display: none;
-                flex-direction: column;
-                margin-top: 15px;
-                background-color: rgba(0, 0, 0, -0.32);
-            };
-
-            .menu_about.active {
-                display: flex;
-                grid-column: 1 / 4;
-
-                a {
-                    background-color: rgba(0, 0, 0, -0.32);
-                    font-family: 'Bebas Neue';
-                    font-size: x-large;
-                    padding: 1rem;
-
-                };
-            };
-        };
+        .menu_about a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
 
         article {
             padding: 1rem;
+            padding-top: 8%;
+            font-size: x-small;
+        }
 
-            font-size: small;
+        .logo {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 20px;
+            justify-content: space-evenly;
+        }
 
-            .logo {
-                
-                visibility: collapse;
-
-                .github_logo {
-                    height: 0.1rem;
-                    font-size: 0.1rem;
-                };
-
-                .linkedin_logo {
-                    height: 0.1rem;
-                    font-size: 0.1rem;
-                };
-
-                .mail_logo {
-                    height: 0.1rem;
-                    font-size: 0.1rem;
-                };
-            };
-        };
+        .github_logo,
+        .linkedin_logo,
+        .mail_logo {
+            height: 30px;
+            width: 30px;
+        }
 
         .footer_title {
-            font-family: 'Bebas Neue';
+            font-family: 'Bebas Neue', sans-serif;
             font-size: large;
-
             background-color: rgba(0, 0, 0, 0.680);
             color: white;
-
             text-align: center;
-
-            padding: 1rem;
+            padding: 3.5rem;
         }
-    };
-};
+
+        /* ========================================
+           BREAKPOINTS RESPONSIVE
+           ======================================== */
+
+        /* 📱 PETIT SMARTPHONE (320px - 480px) */
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            nav {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+                gap: 8px;
+                padding: 0.8rem;
+            }
+
+            nav button {
+                width: 100%;
+                padding: 12px;
+                font-size: 1.5rem;
+            }
+
+            .title {
+                grid-column: 1;
+                text-align: center;
+            }
+
+            .name_title {
+                font-size: x-large;
+            }
+
+            .job_title {
+                font-size: x-small;
+                margin-top: 3px;
+            }
+
+            .menu_about.active {
+                grid-column: 1;
+            }
+
+            .menu_about a {
+                font-size: large;
+                padding: 1rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            article {
+                padding: 1.5rem 1rem;
+                font-size: x-small;
+            }
+
+            article h1 {
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .logo {
+                justify-content: center;
+                gap: 20px;
+                margin-top: 20px;
+            }
+
+            .github_logo,
+            .linkedin_logo,
+            .mail_logo {
+                height: 35px;
+                width: 35px;
+            }
+
+            .footer_title {
+                font-size: large;
+                padding: 1rem;
+            }
+        }
+
+        /* 📱 SMARTPHONE STANDARD (481px - 768px) */
+        @media (min-width: 481px) and (max-width: 768px) {
+            nav {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+                gap: 10px;
+            }
+
+            nav button {
+                width: 100%;
+                padding: 15px;
+                font-size: 1.8rem;
+            }
+
+            .title {
+                grid-column: 1;
+                text-align: center;
+            }
+
+            .name_title {
+                font-size: xx-large;
+            }
+
+            .job_title {
+                font-size: small;
+                margin-top: 5px;
+            }
+
+            .menu_about.active {
+                grid-column: 1;
+            }
+
+            .menu_about a {
+                font-size: x-large;
+                padding: 1.5rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            article {
+                padding: 2rem 1.5rem;
+                font-size: small;
+            }
+
+            article h1 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            article p {
+                line-height: 1.6;
+            }
+
+            .logo {
+                justify-content: center;
+                gap: 30px;
+                margin-top: 30px;
+            }
+
+            .github_logo,
+            .linkedin_logo,
+            .mail_logo {
+                height: 40px;
+                width: 40px;
+            }
+
+            .footer_title {
+                font-size: x-large;
+                padding: 1.5rem;
+            }
+        }
+
+        /* 💻 TABLETTE (769px - 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            nav {
+                padding: 0.8rem;
+            }
+
+            nav button {
+                display: none; /* Cache le bouton hamburger */
+            }
+
+            .title {
+                grid-column: 1 / 3;
+            }
+
+            .name_title {
+                font-size: xx-large;
+            }
+
+            .job_title {
+                font-size: medium;
+            }
+
+            .menu_about {
+                display: flex !important;
+                flex-direction: row;
+                grid-column: 4 / 4;
+                margin-top: 0;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 10px;
+            }
+
+            .menu_about a {
+                padding: 0.5rem 1rem;
+                font-size: x-large;
+            }
+
+            article {
+                padding: 2rem;
+                font-size: small;
+            }
+
+            .logo {
+                gap: 25px;
+            }
+
+            .github_logo,
+            .linkedin_logo,
+            .mail_logo {
+                height: 35px;
+                width: 35px;
+            }
+        }
+
+        /* 🖥️ DESKTOP PETIT (1025px - 1440px) */
+        @media (min-width: 1025px) and (max-width: 1440px) {
+            nav button {
+                display: none;
+            }
+
+            .menu_about {
+                display: flex !important;
+                flex-direction: row;
+                grid-column: 3 / 4;
+                margin-top: 0;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 15px;
+            }
+
+            .menu_about a {
+                padding: 0.5rem 1.2rem;
+            }
+
+            article {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 3rem 2rem;
+            }
+        }
+
+        /* 🖥️ GRAND ÉCRAN (1441px+) */
+        @media (min-width: 1441px) {
+            nav {
+                max-width: 1600px;
+                margin: 0 auto;
+                padding: 1rem 2rem;
+            }
+
+            nav button {
+                display: none;
+            }
+
+            .menu_about {
+                display: flex !important;
+                flex-direction: row;
+                grid-column: 3 / 4;
+                margin-top: 0;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 20px;
+            }
+
+            .menu_about a {
+                padding: 0.8rem 1.5rem;
+                font-size: x-large;
+            }
+
+            .name_title {
+                font-size: xxx-large;
+            }
+
+            article {
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 4rem 3rem;
+                font-size: medium;
+            }
+
+            article h1 {
+                font-size: 2.5rem;
+            }
+
+            .logo {
+                gap: 40px;
+            }
+
+            .github_logo,
+            .linkedin_logo,
+            .mail_logo {
+                height: 45px;
+                width: 45px;
+            }
+
+            .footer_title {
+                font-size: xx-large;
+                padding: 2rem;
+            }
+        }
