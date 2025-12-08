@@ -117,8 +117,8 @@
         .github_logo,
         .linkedin_logo,
         .mail_logo {
-            height: 30px;
-            width: 30px;
+            height: 15%;
+            width: 6rem;
         }
 
         .footer_title {
@@ -185,6 +185,11 @@
             article h1 {
                 font-size: 1.2rem;
                 margin-bottom: 0.8rem;
+            }
+
+              article img {
+                width : 50%;
+                padding : 1rem;
             }
 
             .logo {
@@ -254,6 +259,11 @@
                 margin-bottom: 1rem;
             }
 
+            article img {
+                width : 50%;
+                padding : 1rem;
+            }
+
             article p {
                 line-height: 1.6;
             }
@@ -267,8 +277,8 @@
             .github_logo,
             .linkedin_logo,
             .mail_logo {
-                height: 40px;
-                width: 40px;
+                height: 15%;
+                width: 6rem;
             }
 
             .footer_title {
@@ -326,8 +336,8 @@
             .github_logo,
             .linkedin_logo,
             .mail_logo {
-                height: 35px;
-                width: 35px;
+                height: 15%;
+                width: 6rem;
             }
         }
 
@@ -407,8 +417,8 @@
             .github_logo,
             .linkedin_logo,
             .mail_logo {
-                height: 45px;
-                width: 45px;
+                height: 15%;
+                width: 5rem;
             }
 
             .footer_title {
