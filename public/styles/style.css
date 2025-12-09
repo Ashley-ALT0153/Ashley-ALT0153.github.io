@@ -140,7 +140,7 @@
            ======================================== */
 
         /* 📱 PETIT SMARTPHONE (320px - 480px) */
-        @media (max-width: 480px) {
+        @media (max-width: 320px) {
             body {
                 font-size: 14px;
             }
@@ -206,8 +206,8 @@
             .github_logo,
             .linkedin_logo,
             .mail_logo {
-                height: 35px;
-                width: 35px;
+                height: 15%;
+                width: 6rem;
             }
 
             .footer_title {
@@ -217,7 +217,7 @@
         }
 
         /* 📱 SMARTPHONE STANDARD (481px - 768px) */
-        @media (min-width: 481px) and (max-width: 768px) {
+        @media (min-width: 321px) and (max-width: 768px) {
             nav {
                 grid-template-columns: 1fr;
                 grid-template-rows: auto auto;
