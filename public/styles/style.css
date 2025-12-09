@@ -187,6 +187,16 @@
                 font-size: x-small;
             }
 
+            article .photo_main {
+            pointer-events: none;
+            position: absolute;
+            width: 4rem;
+            height: 6rem;
+            right: 0rem;
+            top: 1%;
+            border-radius: 50%;
+            }
+
             article h1 {
                 font-size: 1.2rem;
                 margin-bottom: 0.8rem;
