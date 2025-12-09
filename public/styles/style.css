@@ -90,6 +90,11 @@
             border-radius: 50%;
         }
 
+        article h1 {
+            font-family: 'Bebas Neue';
+            font-size: xx-large;
+        }
+
         article h3 {
             font-family: 'Bebas Neue';
             font-size: x-large;
